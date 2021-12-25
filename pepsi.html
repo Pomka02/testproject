@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="pepsi.css">
+		
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<section class="sec">
+		<header>
+			<a href="#"><img src="img/logo.png" class="logo"></a>
+			<ul>
+				<li><a href="#" onmouseover="big(this)" onmouseout="small(this)">Home</a></li>
+				<li><a href="#" onmouseover="big(this)" onmouseout="small(this)">Products</a></li>
+				<li><a href="#" onmouseover="big(this)" onmouseout="small(this)">About Us</a></li>
+				<li><a href="#" onmouseover="big(this)" onmouseout="small(this)">Contact</a></li>
+			</ul>
+		</header>
+		<div class="content">
+			<div class="textBox">
+				<h2>Wow<br><span>I Like it</span></h2>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				<a href="#">View All Product</a>
+			</div>
+			<div class="imgBox">
+				<img src="img/pepsi1.png" class="pepsi">
+			</div>
+		</div>
+		<ul class="thumb">
+			<li><img src="img/pepsi1.png" onclick="imgSlider('img/pepsi1.png')"></li>
+			<li><img src="img/pepsi3.png" onclick="imgSlider('img/pepsi3.png')"></li>
+		</ul>
+	</section>
+<script>
+	function imgSlider(element) {
+	document.querySelector('.pepsi').src = element;
+}
+$(document).ready(function(){
+	$('.logo').click(function() {
+		$('.pepsi').slideUp('slow');
+	});
+}) ;
+	function big(element) {
+		element.style.fontSize = "30px";
+	}
+	function small(element) {
+		element.style.fontSize = "20px";
+	}
+
+</script>
+
+</body>
+</html>
